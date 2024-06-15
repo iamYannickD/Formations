@@ -1,8 +1,13 @@
 #importation des bibliotheques necessaires 
 from pyautocad import Autocad,APoint,aDouble
+import os
+
+#ouverture du fichier txt, relativement au chemin de ce dernier
+script_dir = os.path.dirname(__file__)
+relative_path = os.path.join(script_dir, '../data/dato.txt')
 
 #ouverture du fichier txt
-data=open("C:/Users/JOVAX/Desktop/dato.txt","r")
+data = open(relative_path, "r")
 
 #Creation des differentes variables 
 name=[]
